@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  
+  --color-accent: #38bdf8;
+  --color-accent-dark: #0ea5e9;
+  --color-accent-glow: rgba(56, 189, 248, 0.2);
+  --color-surface: rgba(15, 23, 42, 0.6);
+  --color-surface-hover: rgba(30, 41, 59, 0.8);
+  --color-border: #1e293b;
+  --color-border-glow: rgba(56, 189, 248, 0.3);
+}
+
+:root {
+  --background: #020617; /* Slate 950 deep */
+  --foreground: #f8fafc; /* Slate 50 */
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer utilities {
+  .text-gradient {
+    background-image: linear-gradient(to right, #f8fafc, #94a3b8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .text-gradient-accent {
+    background-image: linear-gradient(to right, #38bdf8, #818cf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glow-border {
+    box-shadow: 0 0 15px var(--color-accent-glow), inset 0 0 10px var(--color-accent-glow);
+  }
+}
