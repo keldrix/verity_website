@@ -30,8 +30,8 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-5xl md:text-7xl font-bold tracking-tight mb-8"
           >
-            Deterministic execution <br className="hidden md:block" />
-            <span className="text-gradient-accent">for web operations</span>
+            Give your AI Agents hands <br className="hidden md:block" />
+            <span className="text-gradient-accent">that don't slip.</span>
           </motion.h1>
 
           <motion.p
@@ -40,7 +40,7 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-lg md:text-xl text-foreground/70 mb-10 max-w-3xl mx-auto leading-relaxed"
           >
-            Verity turns intent into verified action. It gives ops and platform teams a reliable execution layer for workflows that touch APIs, SaaS tools, and browser-based systems without sacrificing correctness, retry safety, or observability.
+            Stop letting your agents &quot;guess&quot; their way through messy UIs. Verity provides the Deterministic Execution Layer that makes AI automation near 100% reliable—even on legacy apps without APIs.
           </motion.p>
 
           <motion.div
