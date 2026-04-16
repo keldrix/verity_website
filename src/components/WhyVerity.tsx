@@ -25,6 +25,13 @@ const points = [
   }
 ];
 
+const comparisonData = [
+  { feature: "Logic", rpa: "Static / Rigid", ai: "Probabilistic", verity: "Deterministic" },
+  { feature: "Maintenance", rpa: "High (Selector Drift)", ai: "Variable (Prompt Drift)", verity: "Near Zero" },
+  { feature: "Legacy Support", rpa: "Poor (Brittle)", ai: "Non-existent", verity: "Native (ShadowMap)" },
+  { feature: "Trust Layer", rpa: "None", ai: "Low (Black Box)", verity: "High (Audit-Ready)" }
+];
+
 export function WhyVerity() {
   return (
     <section className="py-24 relative overflow-hidden">
@@ -52,6 +59,42 @@ export function WhyVerity() {
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+           initial={{ opacity: 0, y: 20 }}
+           whileInView={{ opacity: 1, y: 0 }}
+           viewport={{ once: true }}
+           transition={{ duration: 0.5, delay: 0.5 }}
+           className="mt-20 max-w-5xl mx-auto"
+        >
+          <div className="overflow-x-auto rounded-xl border border-border/50 bg-surface/50 backdrop-blur-sm shadow-xl">
+            <table className="w-full text-left border-collapse">
+              <thead>
+                <tr className="border-b border-border/50 bg-gradient-to-r from-surface-hover/50 to-surface/50">
+                  <th className="p-6 font-semibold text-foreground/90 whitespace-nowrap">Feature</th>
+                  <th className="p-6 font-semibold text-foreground/90 whitespace-nowrap">Legacy RPA</th>
+                  <th className="p-6 font-semibold text-foreground/90 whitespace-nowrap">Gen-AI Agents</th>
+                  <th className="p-6 font-semibold text-accent whitespace-nowrap">Verity</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-border/30">
+                {comparisonData.map((row, idx) => (
+                  <tr key={idx} className="hover:bg-surface-hover/30 transition-colors group">
+                    <td className="p-6 font-medium text-foreground/90">{row.feature}</td>
+                    <td className="p-6 text-foreground/70">{row.rpa}</td>
+                    <td className="p-6 text-foreground/70">{row.ai}</td>
+                    <td className="p-6 text-accent font-medium bg-accent/5 relative">
+                      {/* Left border highlight for Verity column */}
+                      <div className="absolute left-0 top-0 bottom-0 w-px bg-accent/20" />
+                      {row.verity}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </motion.div>
+
       </div>
     </section>
   );

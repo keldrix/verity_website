@@ -7,6 +7,7 @@ import { WhyVerity } from "@/components/WhyVerity";
 import { UseCases } from "@/components/UseCases";
 import { Credibility } from "@/components/Credibility";
 import { CTASection } from "@/components/CTASection";
+import { FAQSection } from "@/components/FAQSection";
 import { Footer } from "@/components/Footer";
 
 export default function Home() {
@@ -21,7 +22,9 @@ export default function Home() {
       <UseCases />
       <Credibility />
       <CTASection />
+      <FAQSection />
       <Footer />
     </main>
   );
 }
+
