@@ -40,7 +40,7 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-lg md:text-xl text-foreground/70 mb-10 max-w-3xl mx-auto leading-relaxed"
           >
-            Stop letting your agents &quot;guess&quot; their way through messy UIs. Verity provides the Deterministic Execution Layer that makes AI automation near 100% reliable—even on legacy apps without APIs.
+            Stop letting your agents &quot;guess&quot; their way through messy UIs. Verity provides the Deterministic Execution Layer that makes AI automation 100% reliable—even on legacy apps without APIs.
           </motion.p>
 
           <motion.div
